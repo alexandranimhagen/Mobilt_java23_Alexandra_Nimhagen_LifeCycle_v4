@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803379293548",
+    "project_id": "gritapp-1d469",
+    "storage_bucket": "gritapp-1d469.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803379293548:android:d5d357baeaf204b1ca9749",
+        "android_client_info": {
+          "package_name": "com.example.mobilt_java23_lovisa_hjalmar_lifecycle_v4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl12LaFYtNUGGZ0eS-rsZ4dOu6gCwXiGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
