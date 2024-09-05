@@ -1,7 +1,9 @@
 package com.example.mobilt_java23_lovisa_hjalmar_lifecycle_v4
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -22,27 +24,25 @@ class ProfileActivity : AppCompatActivity() {
 
     lateinit var license:String
 
-    lateinit var menuBtn:Button
-    lateinit var profileName:EditText
-    lateinit var profileEmail:EditText
-    lateinit var profilePhone:EditText
-    lateinit var profileDate:EditText
-    lateinit var profileLicense:CheckBox
-    lateinit var profileTerms:RadioButton
-    lateinit var profileSave:Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_profile)
-        menuBtn = findViewById<Button>(R.id.menuButton)
-        profileName = findViewById<EditText>(R.id.nameProfileText)
-        profileEmail = findViewById<EditText>(R.id.emailProfileText)
-        profilePhone = findViewById<EditText>(R.id.phoneProfileText)
-        profileDate = findViewById<EditText>(R.id.dateProfileText)
-        profileLicense = findViewById<CheckBox>(R.id.licenseProfileCheck)
-        profileTerms = findViewById<RadioButton>(R.id.termsAndConditionsRadio)
-        profileSave = findViewById<Button>(R.id.saveFormBtn)
+        val menuBtn = findViewById<Button>(R.id.menuButton)
+        val profileName = findViewById<EditText>(R.id.nameProfileText)
+        val profileEmail = findViewById<EditText>(R.id.emailProfileText)
+        val profilePhone = findViewById<EditText>(R.id.phoneProfileText)
+        val profileDate = findViewById<EditText>(R.id.dateProfileText)
+        val profileLicense = findViewById<CheckBox>(R.id.licenseProfileCheck)
+        val profileTerms = findViewById<RadioButton>(R.id.termsAndConditionsRadio)
+        val profileSave = findViewById<Button>(R.id.saveFormBtn)
+
+        displayUserInfo { user ->
+            profileName.setText(user["name"] as String?)
+            profileEmail.setText(user["email"] as String?)
+            profilePhone.setText(user["phone"] as String?)
+            profileDate.setText(user["birthday"] as String?)
+        }
 
 
         menuBtn.setOnClickListener {
@@ -50,7 +50,7 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        displayUserInfo(String, String)
+        //displayUserInfo()
 
 
         if (profileLicense.isChecked){
@@ -61,7 +61,8 @@ class ProfileActivity : AppCompatActivity() {
 
         profileSave.setOnClickListener {
             if (profileTerms.isActivated)
-            //update()
+                Log.d("Lovisa", "profile saved")
+                //update()
             else Toast.makeText(this, "Please accept terms and conditions", Toast.LENGTH_SHORT).show()
         }
 
@@ -71,34 +72,25 @@ class ProfileActivity : AppCompatActivity() {
             insets
         }
     }
-  /*  fun  displayUser (user:HashMap<String,String>){
-        profileName.setText(user["name"] as String?)
-        profileEmail.setText(user["email"] as String?)
-        profilePhone.setText(user["phone"] as String?)
-        profileDate.setText(user["birthday"] as String?)
-    }*/
-    private fun displayUserInfo(callback: String.Companion, String: String.Companion) {
+
+    private fun displayUserInfo(callback: (user: Map<String, Any>) -> Unit) {
         val userId = auth.currentUser?.uid
         if (userId != null) {
             db.collection("users").document(userId)
                 .get()
                 .addOnSuccessListener { document ->
-                    //displayUser(document.data as HashMap)
-                    // {
-                    callback(document.data ?: emptyMap())
-                    var user= document.data
-                    profileName.setText(user?.get("name") as String?)
-                    profileEmail.setText(user?.get("email") as String?)
-                    profilePhone.setText(user?.get("phone") as String?)
-                    profileDate.setText(user?.get("birthday") as String?)
+                    if (document != null) {
+                        callback(document.data ?: emptyMap())
+                    } else {
+                        Log.d("Lovisa", "finns ej")
+                    }
                 }
         }
 
-        }
     }
 
-
-   /* fun update() {
+/*
+    fun update() {
         val user = hashMapOf(
             "name" to profileName.text.toString(),
             "email" to profileEmail.text.toString(),
@@ -114,6 +106,7 @@ class ProfileActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Log.w(TAG, "Error adding document", e)
             }
-    }
+    }*/
 
-}*/
+}
+

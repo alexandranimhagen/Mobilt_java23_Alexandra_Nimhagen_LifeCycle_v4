@@ -19,17 +19,19 @@ class RegisterActivity : AppCompatActivity() {
 
     var db = Firebase.firestore
 
-    val backBtn = findViewById<Button>(R.id.backButton)
-    val registerEmail = findViewById<EditText>(R.id.editTextTextEmailAddress2)
-    val registerPassword = findViewById<EditText>(R.id.editTextTextPassword)
-    val registerCheckAge = findViewById<CheckBox>(R.id.checkBox2)
-    val addUserBtn = findViewById<Button>(R.id.saveUserButton)
-
+    lateinit var registerPassword:EditText
+    lateinit var registerEmail:EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_register)
+
+        val backBtn = findViewById<Button>(R.id.backButton)
+        registerEmail = findViewById<EditText>(R.id.editTextTextEmailAddress2)
+        registerPassword = findViewById<EditText>(R.id.editTextTextPassword)
+        val registerCheckAge = findViewById<CheckBox>(R.id.checkBox2)
+        val addUserBtn = findViewById<Button>(R.id.saveUserButton)
 
 
         backBtn.setOnClickListener{
