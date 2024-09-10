@@ -24,6 +24,12 @@ class ProfileActivity : AppCompatActivity() {
 
     lateinit var license:String
 
+    lateinit var profileName: EditText
+    lateinit var profileEmail: EditText
+    lateinit var profilePhone: EditText
+    lateinit var profileDate: EditText
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -60,10 +66,10 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         profileSave.setOnClickListener {
-            if (profileTerms.isActivated)
+            if (profileTerms.isActivated) {
                 Log.d("Lovisa", "profile saved")
-                //update()
-            else Toast.makeText(this, "Please accept terms and conditions", Toast.LENGTH_SHORT).show()
+                update()
+            } else Toast.makeText(this, "Please accept terms and conditions", Toast.LENGTH_SHORT).show()
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -89,7 +95,7 @@ class ProfileActivity : AppCompatActivity() {
 
     }
 
-/*
+
     fun update() {
         val user = hashMapOf(
             "name" to profileName.text.toString(),
@@ -106,7 +112,7 @@ class ProfileActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Log.w(TAG, "Error adding document", e)
             }
-    }*/
+    }
 
 }
 
