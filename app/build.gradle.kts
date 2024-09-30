@@ -1,15 +1,15 @@
 plugins {
-    id("com.google.gms.google-services")
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("com.android.application") version "8.6.1"
+    id("org.jetbrains.kotlin.android") version "1.9.10"
+    id("com.google.gms.google-services") version "4.3.15"
 }
 
 android {
-    namespace = "com.example.mobilt_java23_lovisa_hjalmar_lifecycle_v4"
+    namespace = "com.example.mobilt_java23_alexandra_nimhagen_lifecycle_v4"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.mobilt_java23_lovisa_hjalmar_lifecycle_v4"
+        applicationId = "com.example.mobilt_java23_alexandra_nimhagen_lifecycle_v4"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -28,25 +28,33 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
+    buildToolsVersion = "35.0.0"
 }
 
 dependencies {
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-firestore")
-    implementation(platform("com.google.firebase:firebase-bom:33.2.0"))
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.google.firebase.auth.ktx)
+    implementation(libs.firebase.firestore.ktx)
+
+    // AndroidX och Material Design
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.appcompat.v170)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth.ktx)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+
+

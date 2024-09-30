@@ -13,10 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="36dp"
-        android:text="Menu"
+        android:text="@string/button_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
         android:id="@+id/nameProfileText"
@@ -26,7 +25,7 @@
         android:layout_marginTop="123dp"
         android:layout_marginBottom="17dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="@string/hint_name"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/emailProfileText"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +37,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="14dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/hint_email"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/phoneProfileText"
         app:layout_constraintStart_toStartOf="@+id/nameProfileText"
@@ -50,7 +49,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="17dp"
         android:ems="10"
-        android:hint="Phone number"
+        android:hint="@string/hint_phone"
         android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/dateProfileText"
         app:layout_constraintStart_toStartOf="@+id/emailProfileText"
@@ -62,7 +61,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="19dp"
         android:ems="10"
-        android:hint="Date of birth"
+        android:hint="@string/hint_date_of_birth"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/licenseProfileCheck"
         app:layout_constraintStart_toStartOf="@+id/phoneProfileText"
@@ -73,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:text="Drivers license"
+        android:text="@string/checkbox_drivers_license"
         app:layout_constraintBottom_toTopOf="@+id/termsAndConditionsRadio"
         app:layout_constraintStart_toStartOf="@+id/dateProfileText"
         app:layout_constraintTop_toBottomOf="@+id/dateProfileText" />
@@ -84,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginBottom="65dp"
-        android:text="RadioButton"
+        android:text="@string/radio_terms_conditions"
         app:layout_constraintBottom_toTopOf="@+id/saveFormBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/licenseProfileCheck" />
@@ -95,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginBottom="115dp"
-        android:text="Save"
+        android:text="@string/button_save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsRadio" />

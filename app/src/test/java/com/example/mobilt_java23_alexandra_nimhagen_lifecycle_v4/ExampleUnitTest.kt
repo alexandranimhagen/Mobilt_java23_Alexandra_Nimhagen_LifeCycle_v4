@@ -1,4 +1,4 @@
-package com.example.mobilt_java23_lovisa_hjalmar_lifecycle_v4
+package com.example.mobilt_java23_alexandra_nimhagen_lifecycle_v4
 
 import org.junit.Test
 

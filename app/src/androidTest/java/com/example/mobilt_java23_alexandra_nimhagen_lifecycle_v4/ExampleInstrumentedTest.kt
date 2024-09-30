@@ -1,4 +1,4 @@
-package com.example.mobilt_java23_lovisa_hjalmar_lifecycle_v4
+package com.example.mobilt_java23_alexandra_nimhagen_lifecycle_v4
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -20,7 +20,7 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals(
-            "com.example.mobilt_java23_lovisa_hjalmar_lifecycle_v4",
+            "com.example.mobilt_java23_alexandra_nimhagen_lifecycle_v4",
             appContext.packageName
         )
     }

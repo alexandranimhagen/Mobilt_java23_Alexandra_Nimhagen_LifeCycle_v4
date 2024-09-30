@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">Mobilt_java23_Lovisa_Hjalmar_LifeCycle_v4</string>
+        <string name="app_name">MyApp</string>
+        <string name="log_in_button">LOG IN</string>
+        <string name="register_button">REGISTER</string>
+        <string name="profile_button">Profile</string>
+        <string name="hint_email">Email</string>
+        <string name="hint_password">Password</string>
+        <string name="hint_name">Name</string>
+        <string name="text_log_in">Log in</string>
+        <string name="hint_phone">Phone number</string>
+        <string name="hint_date_of_birth">Date of birth</string>
+        <string name="checkbox_drivers_license">Driver\'s license</string>
+        <string name="radio_terms_conditions">I accept the terms and conditions</string>
+        <string name="button_menu">Menu</string>
+        <string name="button_save">Save</string>
+        <string name="back_to_login">Back to log in</string>
+        <string name="add_user">ADD USER</string>
+        <string name="checkbox_over_18">I\'m over 18</string>
+        <string name="profile_page">Profile Page</string>
+        <string name="register">Register</string>
+        <string name="login_page">Login Page</string>
 </resources>
+
+

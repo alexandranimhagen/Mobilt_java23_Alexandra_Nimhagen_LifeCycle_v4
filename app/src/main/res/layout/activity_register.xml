@@ -14,7 +14,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="74dp"
-        android:text="Back to log in"
+        android:text="@string/back_to_login"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,9 +28,9 @@
         android:layout_marginEnd="62dp"
         android:layout_marginBottom="227dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/hint_email"
         android:inputType="textEmailAddress"
-        android:textSize="21dp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toTopOf="@+id/saveUserButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +44,9 @@
         android:layout_marginEnd="62dp"
         android:layout_marginBottom="43dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/hint_password"
         android:inputType="textPassword"
-        android:textSize="21dp"
+        android:textSize="21sp"
         app:layout_constraintBottom_toTopOf="@+id/checkBox2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,10 +55,10 @@
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="231dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="351dp"
-        android:text="I'm over 18"
-        android:textSize="21dp"
+        android:text="@string/checkbox_over_18"
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
@@ -69,10 +69,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
         android:layout_marginBottom="238dp"
-        android:text="ADD USER"
+        android:text="@string/add_user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

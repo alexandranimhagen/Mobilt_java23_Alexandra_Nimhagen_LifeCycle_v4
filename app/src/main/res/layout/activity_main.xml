@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:ems="10"
-        android:hint="email"
+        android:hint="@string/hint_email"
         android:inputType="textEmailAddress"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="password"
+        android:hint="@string/hint_password"
         android:inputType="textPassword"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="@+id/editTextEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress" />
 
@@ -37,27 +37,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="170dp"
-        android:text="Log in"
-        android:textSize="28dp"
+        android:text="@string/text_log_in"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/logInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="LOG IN"
-        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="9dp"
+    android:text="@string/log_in_button"
+    app:layout_constraintStart_toStartOf="@+id/editTextPassword"
+    app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="REGISTER"
-        app:layout_constraintStart_toStartOf="@+id/logInButton"
-        app:layout_constraintTop_toBottomOf="@+id/logInButton" />
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="@string/register_button"
+    app:layout_constraintStart_toStartOf="@+id/logInButton"
+    app:layout_constraintTop_toBottomOf="@+id/logInButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
